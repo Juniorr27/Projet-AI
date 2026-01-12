@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet IA </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif;}
+    </style>
+</head>
+<body class="bg-[#1a1a2e]  text-white">
+    <!-- Header -->
+    <header class="fixed  top-0 left-0 right-0 z-50 transition-all duration-300 ">
+        <div class="bg-[#34495ee6] border border-[#ffffff1a] backdrop-blur-md rounded-xl m-3 max-w-7xl mx-auto px-6 py-4 shadow-lg">
+            <div class="flex justify-between items-center"> 
+                <a href="index.php" class=" flex items-center gap-2 transition ">
+                   <!-- <img src="LOGO PJX5.png" alt="Projet AI logo" class="h-11 w-auto">-->
+                    <span class="font-bold texte-xl tracking-tight hidden md:block">The Project AI</span>
+                </a>
+               
+                
+                <nav class="hidden md:block">
+                    <ul class="flex gap-6 text-sm ">
+                        <li><a class="px-2 inline-block rounded hover:bg-blue-600 hover:scale-110 transition" href="">Accueil</a></li>
+                        <li><a href="" class="px-2 inline-block hover:bg-blue-600 hover:scale-110 rounded transition">Projets</a></li>
+                        <li><a class="inline-block hover:bg-blue-600 hover:scale-110 px-2 rounded transition" href="">Qui sommes-nous</a></li>
+                         <li> <a class="inline-block hover:bg-blue-600 hover:scale-110 rounded-lg px-2 transition" href="">Comment ça marche</a></li>
+                          <li><a class="inline-block px-2 hover:bg-blue-600 hover:scale-110 rounded-lg transition" href=""> Nous contacter</a></li>         
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <a href="index.php?page=login" class="text-sm font-bold hover:text-blue-400 transition">Connexion</a>
+                    <a href="index.php?page=inscription" class=" font-bold bg-blue-600 px-2 rounded-lg  text-sm hover:text-blue-700 transition py-1">Inscription</a>
+                
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="relative h-screen flex items-center justufy-center  overflow-hidden">
+        
+       <div class="absolute inset-0 z-0">
+            <video 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+                class=" w-full h-full object-cover">
+                <source src="video projet X.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-[#1a1a2e] opacity-50"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a2e] via-transparent to-transparent"></div>
+       </div>
+
+       
+        <div class="relative z-10 h-full text-center px-4 max-w-4xl mx-auto mt-16">
+            <div class="text-center text-white max-w-5xl mt-40">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Connectez votre projet avec les investisseurs qui croient en vous
+                 </h1>
+
+                 <div class="flex  gap-4 justify-center">
+                    <button class="bg-white text-[#1a1a2e] hover:bg-gray-100 py-3 px-8 rounded-lg font-bold transition transform hover:scale-105 lex items-center justify-center gap-2">
+                         <a href="index.php?page=inscription&role=porteur">Je suis un porteur de projet</a> 
+                    </button>
+                    <button class="bg-transparent border-2 rounded-lg transition transform hover:bg-white/10 py-3 px-8 hover:scale-105 font-bold">
+                       <a href="index.php?page=inscription&role=investisseur">Je suis un investisseur</a> 
+                    </button>   
+                 </div>
+                
+            </div>
+        </div>
+        
+    </section >
+
+    <section class="relative  px-4  pb-20">
+        <div class="bg-[#252540] mx-auto p-4 min-h-[150px] shadow-2xl w-1/2 rounded-xl border-2 border-double border-[#ffffff1a] max-w-6xl mb-6">
+            <H2 class="text-lg flex justify-center font-semibold ">Trouvez une opportunité par secteur</H2>
+            <form action="" class="flex flex-col   md:flex-row mt-4 gap-8">
+                <div class="">
+                    <label for="flex-1" class="block text-xs text-gray-400 mb-2 ml-1">Domaine IA</label>
+                    <select name="" id="" class="w-full bg-[#1a1a2e] rounded-lg  border border-[#ffffff1a] px-4 py-2.5 focus:outline-none focus:border-blue-500 transition ">
+                        <option value="">Tous les domaines</option>
+                       
+                    </select>
+                </div>
+                <div class="flex-1">
+                    <label for="" class="block text-xs text-gray-400 mb-2 ml-1">Stade du projet</label>
+                    <select name="" id="" class=" w-full bg-[#1a1a2e] rounded-lg  border border-[#ffffff1A] px-4 py-2.5 focus:outline-none focus:border-blue-500 transition ">
+                        <option value="">Tout stade</option>
+                       
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <button type="submit" class=" rounded bg-blue-600 px-6 py-2 inline-block hover:scale-110 hover:bg-blue-700 transition text-white font-semibold shadow-lg whitespace-nowrap"> Rechercher</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section>
+
+        <div >
+            <h2 class="text-[#5D8A66] text-3xl flex justify-center  mb-2 font-bold"> Comment ça marche </h2>
+        </div>
+    </section>
+        <div class="bg-gray-500 h-96 w-2/3 mx-auto rounded-lg  mb-4">
+           <div class="border-l-4 border-[#21445B]-500 bg-white pl-6 ">
+
+           </div>
+           <div>
+
+           </div>
+        </div>
+
+    <footer class="bg-[#34495ee6] border-t border-[#ffffff0d] py-8 text-sm  text-gray-400 text-center"> 
+        <div>
+                      
+            <div class="flex flex items-center  gap-2 justify-center">
+                
+                <a href=""><img src="LinkedIn_logo_1.png" alt="logo linkdin" class="h-7 w-auto  "></a>
+                <a href=""><img src="logo instagrame1.png" alt="logo instagrame" class="h-9 w-auto "></a>
+                    &copy; 2025 Projet IA. Tous droits réservés.
+            </div> 
+        </div>
+    </footer>
+</body>
+</html>

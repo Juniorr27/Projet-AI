@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet X - Investissez dans l'IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#1a1a2e] text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="bg-[#34495ee6] backdrop-blur-md border border-[#ffffff1a] rounded-xl m-4 max-w-7xl mx-auto px-6 py-3 shadow-lg">
+            <div class="flex justify-between items-center"> 
+
+                <a href="index.php" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img class="h-10 w-auto" src="LOGO PJX5.png" alt="Projet X Logo">
+                    <span class="font-bold text-xl tracking-tight hidden md:block">Projet X</span>
+                </a>
+                
+                <nav class="hidden md:block">
+                    <ul class="flex gap-6 text-sm font-medium">
+                        <li><a class="hover:text-blue-400 transition" href="index.php?page=home">Accueil</a></li>
+                        <li><a class="hover:text-blue-400 transition" href="index.php?page=projets">Projets</a></li>
+                        <li><a class="hover:text-blue-400 transition" href="index.php?page=about">Qui sommes-nous</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="flex items-center gap-3">
+                    <a href="index.php?page=login" class="text-sm font-medium hover:text-blue-400 transition">Connexion</a>
+                    <a href="index.php?page=inscription" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-lg transition transform hover:scale-105 shadow-md shadow-blue-500/20">
+                        Inscription
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        
+        <div class="absolute inset-0 z-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="video projet X.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-[#1a1a2e] opacity-70"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a2e] via-transparent to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-500/20 border border-blue-500/50 text-blue-300 text-xs font-semibold mb-6 uppercase tracking-wider">
+                La 1ère plateforme de mise en relation IA
+            </span>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                L'Intelligence Artificielle <br> cherche ses visionnaires.
+            </h1>
+            
+            <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+                Connectez votre projet avec des investisseurs qualifiés ou trouvez la prochaine licorne de l'IA. Mise en relation vérifiée manuellement.
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="index.php?page=inscription&role=porteur" class="bg-white text-[#1a1a2e] hover:bg-gray-100 py-3 px-8 rounded-lg font-bold transition transform hover:scale-105 flex items-center justify-center gap-2">
+                    🚀 Je cherche des fonds
+                </a>
+                <a href="index.php?page=inscription&role=investisseur" class="bg-transparent border-2 border-white hover:bg-white/10 text-white py-3 px-8 rounded-lg font-bold transition transform hover:scale-105 flex items-center justify-center gap-2">
+                    💼 Je veux investir
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative z-20 -mt-24 px-4 pb-20">
+        <div class="max-w-5xl mx-auto bg-[#252540] border border-[#ffffff1a] rounded-2xl shadow-2xl p-6 md:p-8">
+            <h2 class="text-xl font-semibold mb-4 text-center md:text-left">Trouvez une opportunité par secteur</h2>
+            
+            <form action="index.php" method="GET" class="flex flex-col md:flex-row gap-4">
+                <input type="hidden" name="page" value="home"> 
+                <div class="flex-grow">
+                    <label class="block text-xs text-gray-400 mb-1 ml-1">Domaine IA</label>
+                    <select name="domaine" class="w-full bg-[#1a1a2e] text-white border border-[#ffffff1a] rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition appearance-none">
+                        <option value="">Tous les domaines (Machine Learning, NLP...)</option>
+                        <option value="nlp">Traitement du Langage (NLP)</option>
+                        <option value="cv">Vision par Ordinateur</option>
+                        <option value="robotics">Robotique</option>
+                    </select>
+                </div>
+
+                <div class="md:w-1/4">
+                    <label class="block text-xs text-gray-400 mb-1 ml-1">Stade du projet</label>
+                    <select name="stade" class="w-full bg-[#1a1a2e] text-white border border-[#ffffff1a] rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition appearance-none">
+                        <option value="">Tout stade</option>
+                        <option value="idee">Idée</option>
+                        <option value="prototype">Prototype</option>
+                        <option value="early">Early Stage</option>
+                    </select>
+                </div>
+
+                <div class="flex items-end">
+                    <button type="submit" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">
+                        Rechercher
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-[#151525] border-t border-[#ffffff0d] py-8 text-center text-sm text-gray-400"> 
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition">LinkedIn</a>
+                <a href="#" class="hover:text-white transition">Twitter / X</a>
+                <a href="#" class="hover:text-white transition">Mentions Légales</a>
+            </div>
+            <div>
+                &copy; 2025 Projet X. Tous droits réservés.
+            </div> 
+        </div>
+    </footer>
+
+</body>
+</html>
