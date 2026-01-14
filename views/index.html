@@ -20,6 +20,7 @@
         <div
             class="bg-[#34495ee6] border border-[#ffffff1a] backdrop-blur-md rounded-xl m-3 max-w-7xl mx-auto px-6 py-4 shadow-lg">
             <div class="flex justify-between items-center">
+
                 <a href="index.php" class=" flex items-center gap-2 transition ">
                     <!-- <img src="LOGO PJX5.png" alt="Projet AI logo" class="h-11 w-auto">-->
                     <span class="font-bold texte-xl tracking-tight hidden md:block">The Project AI</span>
@@ -47,6 +48,33 @@
                     <a href="index.php?page=inscription"
                         class=" font-bold bg-blue-600 px-2 rounded-lg  text-sm hover:text-blue-700 transition py-1">Inscription</a>
 
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                    <ul class="flex flex-col gap-3 text-sm">
+                        <li><a class="block px-4 py-2 rounded hover:bg-blue-600 transition" href="">Accueil</a></li>
+                        <li><a href="" class="block px-4 py-2 hover:bg-blue-600 rounded transition">Projets</a></li>
+                        <li><a class="block hover:bg-blue-600 px-4 py-2 rounded transition" href="">Qui sommes-nous</a>
+                        </li>
+                        <li><a class="block hover:bg-blue-600 rounded px-4 py-2 transition" href="">Comment ça
+                                marche</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-blue-600 rounded transition" href="">Nous contacter</a>
+                        </li>
+                        <li class="border-t border-[#ffffff1a] pt-3 mt-2">
+                            <a href="index.php?page=login"
+                                class="block px-4 py-2 text-center hover:bg-blue-600 rounded transition">Connexion</a>
+                        </li>
+                        <li>
+                            <a href="index.php?page=inscription"
+                                class="block bg-blue-600 px-4 py-2 rounded text-center hover:bg-blue-700 transition">Inscription</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
     </header>
@@ -88,143 +116,168 @@
 
     </section>
 
-    <section class="relative  px-4  pb-20">
-        <div
-            class="bg-[#252540] mx-auto p-4 min-h-[150px] shadow-2xl w-1/2 rounded-xl border-2 border-double border-[#ffffff1a] max-w-6xl mb-6">
-            <H2 class="text-lg flex justify-center font-semibold ">Trouvez une opportunité par secteur</H2>
-            <form action="" class="flex flex-col   md:flex-row mt-4 gap-8">
-                <div class="flex-1">
-                    <label for="" class="block text-xs text-gray-400 mb-2 ml-1">Domaine IA</label>
-                    <select name="" id=""
-                        class="w-full bg-[#1a1a2e] rounded-lg  border border-[#ffffff1a] px-4 py-2.5 focus:outline-none focus:border-blue-500 transition ">
-                        <option value="">Tous les domaines (Machine Learning, NLP...)</option>
 
+
+    <!-- Section de recherche qui chevauche -->
+    <section class="relative px-4 pb-20 -mt-40 z-10">
+        <div
+            class="bg-[#252540] mx-auto p-6 shadow-2xl w-full md:w-3/4 lg:w-1/2 rounded-xl border-2 border-double border-[#ffffff1a] max-w-6xl">
+            <h2 class="text-xl text-white text-center font-semibold mb-4">
+                Trouvez une opportunité par secteur
+            </h2>
+            <form action="" class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <label for="domaine" class="block text-xs text-gray-400 mb-2 ml-1">
+                        Domaine IA
+                    </label>
+                    <select id="domaine"
+                        class="w-full bg-[#1a1a2e] text-white rounded-lg border border-[#ffffff1a] px-4 py-2.5 focus:outline-none focus:border-blue-500 transition">
+                        <option value="">Tous les domaines (Machine Learning, NLP...)</option>
                     </select>
                 </div>
                 <div class="flex-1">
-                    <label for="" class="block text-xs text-gray-400 mb-2 ml-1">Stade du projet</label>
-                    <select name="" id=""
-                        class=" w-full bg-[#1a1a2e] rounded-lg  border border-[#ffffff1A] px-4 py-2.5 focus:outline-none focus:border-blue-500 transition ">
+                    <label for="stade" class="block text-xs text-gray-400 mb-2 ml-1">
+                        Stade du projet
+                    </label>
+                    <select id="stade"
+                        class="w-full bg-[#1a1a2e] text-white rounded-lg border border-[#ffffff1a] px-4 py-2.5 focus:outline-none focus:border-blue-500 transition">
                         <option value="">Tout stade</option>
-
                     </select>
                 </div>
                 <div class="flex items-end">
                     <button type="submit"
-                        class=" rounded bg-blue-600 px-6 py-2 inline-block hover:scale-110 hover:bg-blue-700 transition text-white font-semibold shadow-lg whitespace-nowrap">
-                        Rechercher</button>
+                        class="rounded bg-blue-600 px-6 py-2.5 hover:scale-105 hover:bg-blue-700 transition-all duration-300 text-white font-semibold shadow-lg whitespace-nowrap">
+                        Rechercher
+                    </button>
                 </div>
             </form>
         </div>
     </section>
 
-    <section class="py">
+    <section class="py-12">
+        <div class="container mx-auto px-4">
 
-        <div>
-            <h2 class="text-[#5D8A66] text-3xl flex justify-center  mb-4 font-bold"> Comment ça marche </h2>
-        </div>
-        <div class=" bg-gray-500 h-[550px] w-2/3 flex flex-col  mx-auto rounded-lg  mb-4">
-            <div class="flex-1">
-                <div class="px-4 py-4 ">
-                <h2 class="font-bold px-2 mb-3 text-xl">Pour les Porteurs de Projets</h2>
-                <div class="border-l-4 px-2 border-blue-500 w-1/2  rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">1</span>
-                        : Créez votre profil
-                    </h3>
-                    <p class="text-gray-600 ">→ Décrivez votre projet IA en quelques minutes</p>
-                    <p class="text-gray-600 ">→ Uploadez votre pitch deck</p>
-                </div>
+            <h2 class="text-[#5D8A66] text-3xl text-center mb-8 font-bold">Comment ça marche</h2>
 
-                <div class="border-l-4 px-2 border-blue-500 w-1/2 mt-6 rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">2</span>
-                       : Découvrez les investisseurs
-                    </h3>
-                    <p class="text-gray-600 ">→ Parcourez les profils d'investisseurs</p>
-                    <p class="text-gray-600 ">→ Filtrez par secteur et domaine IA</p>
-                </div>
+            <!-- Conteneur principal avec 2 colonnes -->
+            <div class=" rounded-lg p-6 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <div class="border-l-4 px-2 border-blue-500 w-1/2 mt-6 rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">3</span>
-                     : Entrez en contact
-                    </h3>
-                    <p class="text-gray-600 ">→ Envoyez une demande de mise en relation</p>
-                    <p class="text-gray-600">→ Échangez et pitchez votre projet</p>
-                </div>
+                    <!-- COLONNE 1 : Porteurs de projets -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-2xl mb-4 text-white text-center"> Pour les Porteurs de Projets</h3>
 
-                <div class="border-l-4 px-2 border-blue-500 w-1/2 mt-6 rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">4</span>
-                     : Obtenez votre financement
-                    </h3>
-                    <p class="text-gray-600 ">→ Négociez avec les investisseurs</p>
-                    <p class="text-gray-600">→ Décrochez le financement pour réaliser votre vision</p>
+                        <!-- Étape 1 -->
+                        <div class="border-l-4 border-blue-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-blue-500 text-white w-7 h-7 rounded text-sm font-bold">1</span>
+                                : Créez votre profil
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Décrivez votre projet IA en quelques minutes</p>
+                            <p class="text-gray-600 text-sm">→ Uploadez votre pitch deck</p>
+                        </div>
+
+                        <!-- Étape 2 -->
+                        <div class="border-l-4 border-blue-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-blue-500 text-white w-7 h-7 rounded text-sm font-bold">2</span>
+                                : Découvrez les investisseurs
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Parcourez les profils d'investisseurs</p>
+                            <p class="text-gray-600 text-sm">→ Filtrez par secteur et domaine IA</p>
+                        </div>
+
+                        <!-- Étape 3 -->
+                        <div class="border-l-4 border-blue-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-blue-500 text-white w-7 h-7 rounded text-sm font-bold">3</span>
+                                : Entrez en contact
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Envoyez une demande de mise en relation</p>
+                            <p class="text-gray-600 text-sm">→ Échangez et pitchez votre projet</p>
+                        </div>
+
+                        <!-- Étape 4 -->
+                        <div class="border-l-4 border-blue-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-blue-500 text-white w-7 h-7 rounded text-sm font-bold">4</span>
+                                : Obtenez votre financement
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Négociez avec les investisseurs</p>
+                            <p class="text-gray-600 text-sm">→ Décrochez le financement pour réaliser votre vision</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <button
+                                class="bg-blue-500 text-white hover:bg-blue-600 py-3 px-8 rounded-lg font-bold transition transform hover:scale-105 flex items-center justify-center gap-2">
+                                <a href="index.php?page=inscription&role=porteur">Créer mon profil porteur</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- COLONNE 2 : Investisseurs -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-2xl mb-4 text-white text-center"> Pour les Investisseurs</h3>
+
+                        <!-- Étape 1 -->
+                        <div class="border-l-4 border-green-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-green-500 text-white w-7 h-7 rounded text-sm font-bold">1</span>
+                                : Créez votre profil
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Définissez vos critères d'investissement</p>
+                            <p class="text-gray-600 text-sm">→ Précisez vos domaines IA d'intérêt</p>
+                        </div>
+
+                        <!-- Étape 2 -->
+                        <div class="border-l-4 border-green-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-green-500 text-white w-7 h-7 rounded text-sm font-bold">2</span>
+                                : Explorez les projets
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Accédez au catalogue de projets innovants</p>
+                            <p class="text-gray-600 text-sm">→ Filtrez par secteur, domaine IA, montant</p>
+                        </div>
+
+                        <!-- Étape 3 -->
+                        <div class="border-l-4 border-green-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-green-500 text-white w-7 h-7 rounded text-sm font-bold">3</span>
+                                : Contactez les porteurs
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Demandez plus d'informations</p>
+                            <p class="text-gray-600 text-sm">→ Organisez des rendez-vous</p>
+                        </div>
+
+                        <!-- Étape 4 -->
+                        <div class="border-l-4 border-green-500 pl-4 rounded-lg bg-white py-3 shadow-sm">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">
+                                Étape <span
+                                    class="inline-flex items-center justify-center bg-green-500 text-white w-7 h-7 rounded text-sm font-bold">4</span>
+                                : Investissez dans l'avenir
+                            </h4>
+                            <p class="text-gray-600 text-sm">→ Soutenez les projets prometteurs</p>
+                            <p class="text-gray-600 text-sm">→ Suivez l'évolution de vos investissements</p>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <button
+                                class="bg-green-500 text-white hover:bg-green-600 py-3 px-8 rounded-lg font-bold transition transform hover:scale-105 flex items-center justify-center gap-2">
+                                <a href="index.php?page=inscription&role=porteur">Créer mon profil porteur</a>
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="flex-1">
-                <div class="px-4 py-4 ">
-                <h2 class="font-bold px-2 mb-3 text-xl">Pour les Investisseurs</h2>
-                <div class="border-l-4 px-2 border-blue-500 w-1/2  rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">1</span>
-                        : Créez votre profil
-                    </h3>
-                    <p class="text-gray-600 ">→ Définissez vos critères d'investissement</p>
-                    <p class="text-gray-600 ">→ Précisez vos domaines IA d'intérêt</p>
-                </div>
-
-                <div class="border-l-4 px-2 border-blue-500 w-1/2 mt-6 rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">2</span>
-                       : Découvrez les investisseurs
-                    </h3>
-                    <p class="text-gray-600 ">→ Accédez au catalogue de projets innovants</p>
-                    <p class="text-gray-600 ">→ Filtrez par secteur, domaine IA, montant</p>
-                </div>
-
-                <div class="border-l-4 px-2 border-blue-500 w-1/2 mt-6 rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">3</span>
-                     : Contactez les porteurs
-                    </h3>
-                    <p class="text-gray-600 ">→ Demandez plus d'informations</p>
-                    <p class="text-gray-600">→ Organisez des rendez-vous</p>
-                </div>
-
-                <div class="border-l-4 px-2 border-blue-500 w-1/2 mt-6 rounded-lg bg-white  py-2 shadow-sm">
-                    <h3 class="text-lg font-bold text-gray-800 ">
-                        Étape
-                        <span
-                            class="inline-flex items-center justify-center bg-blue-500 text-white w-8 h-8 rounded text-lg font-bold">4</span>
-                     : Investissez dans l'avenir
-                    </h3>
-                    <p class="text-gray-600 ">→ Soutenez les projets prometteurs</p>
-                    <p class="text-gray-600">→ Suivez l'évolution de vos investissements</p>
-                </div>
-            </div>
-            
-            </div>
-        </div>
         </div>
     </section>
-
 
     <footer class="bg-[#34495ee6] border-t border-[#ffffff0d] py-8 text-sm  text-gray-400 text-center">
         <div>
