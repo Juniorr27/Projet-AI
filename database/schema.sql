@@ -1,19 +1,21 @@
--- Fichier : database/script.sql
+-- database/schema.sql
 
--- 1. Création de la base de données (si elle n'existe pas)
+-- 1. Base de données
 CREATE DATABASE IF NOT EXISTS projet_ai_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE projet_ai_db;
 
--- 2. Nettoyage (Optionnel : supprime les tables existantes pour repartir à zéro)
+-- 2. Nettoyage préalable (pour éviter les erreurs si on relance le script)
+SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS demandes_contact;
 DROP TABLE IF EXISTS investisseur_interets;
 DROP TABLE IF EXISTS profils_investisseurs;
 DROP TABLE IF EXISTS profils_porteurs;
 DROP TABLE IF EXISTS domaines_ia;
 DROP TABLE IF EXISTS users;
+SET FOREIGN_KEY_CHECKS = 1;
 
 -- ==========================================
--- 3. TABLE UTILISATEURS
+-- 3. TABLE UTILISATEURS (Auth)
 -- ==========================================
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,7 +26,7 @@ CREATE TABLE users (
 ) ENGINE=InnoDB;
 
 -- ==========================================
--- 4. TABLE DOMAINES IA
+-- 4. TABLE DOMAINES IA (Catégories)
 -- ==========================================
 CREATE TABLE domaines_ia (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -33,7 +35,7 @@ CREATE TABLE domaines_ia (
 ) ENGINE=InnoDB;
 
 -- ==========================================
--- 5. PROFILS PORTEURS
+[cite_start]-- 5. PROFILS PORTEURS [cite: 4]
 -- ==========================================
 CREATE TABLE profils_porteurs (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -50,7 +52,7 @@ CREATE TABLE profils_porteurs (
 ) ENGINE=InnoDB;
 
 -- ==========================================
--- 6. PROFILS INVESTISSEURS
+[cite_start]-- 6. PROFILS INVESTISSEURS [cite: 13]
 -- ==========================================
 CREATE TABLE profils_investisseurs (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -61,7 +63,21 @@ CREATE TABLE profils_investisseurs (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS demandes_contact (
+-- ==========================================
+[cite_start]-- 7. INTÉRÊTS INVESTISSEURS (Celle qui manquait !) [cite: 19]
+-- ==========================================
+CREATE TABLE investisseur_interets (
+    investisseur_id INT NOT NULL,
+    domaine_id INT NOT NULL,
+    PRIMARY KEY (investisseur_id, domaine_id),
+    FOREIGN KEY (investisseur_id) REFERENCES profils_investisseurs(id) ON DELETE CASCADE,
+    FOREIGN KEY (domaine_id) REFERENCES domaines_ia(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- ==========================================
+[cite_start]-- 8. DEMANDES DE CONTACT (Celle qui manquait avant !) [cite: 32]
+-- ==========================================
+CREATE TABLE demandes_contact (
     id INT AUTO_INCREMENT PRIMARY KEY,
     sender_id INT NOT NULL,
     receiver_id INT NOT NULL,
