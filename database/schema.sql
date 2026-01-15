@@ -61,15 +61,13 @@ CREATE TABLE profils_investisseurs (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- ==========================================
--- 7. INSERTION DES DOMAINES (Données fixes)
--- ==========================================
-INSERT INTO domaines_ia (nom, description) VALUES
-('NLP & Chatbots', 'Traitement du langage naturel, GPT, traduction.'),
-('Vision par Ordinateur', 'Reconnaissance d\'images, détection, médical.'),
-('IA Générative', 'Création d\'images, vidéos, voix.'),
-('Machine Learning', 'Analyse de données, prédictions.'),
-('Robotique', 'Drones, robots autonomes.'),
-('Santé / MedTech', 'IA appliquée à la médecine.'),
-('FinTech', 'IA pour la finance.'),
-('Autre', 'Projets tech hors IA.');
+CREATE TABLE IF NOT EXISTS demandes_contact (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender_id INT NOT NULL,
+    receiver_id INT NOT NULL,
+    statut ENUM('en_attente', 'validé', 'refusé') DEFAULT 'en_attente',
+    message_intro TEXT,
+    date_demande DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (receiver_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
