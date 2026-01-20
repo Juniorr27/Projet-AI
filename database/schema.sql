@@ -35,7 +35,7 @@ CREATE TABLE domaines_ia (
 ) ENGINE=InnoDB;
 
 -- ==========================================
-[cite_start]-- 5. PROFILS PORTEURS [cite: 4]
+-- 5. PROFILS PORTEURS [cite: 4]
 -- ==========================================
 CREATE TABLE profils_porteurs (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -52,7 +52,7 @@ CREATE TABLE profils_porteurs (
 ) ENGINE=InnoDB;
 
 -- ==========================================
-[cite_start]-- 6. PROFILS INVESTISSEURS [cite: 13]
+-- 6. PROFILS INVESTISSEURS [cite: 13]
 -- ==========================================
 CREATE TABLE profils_investisseurs (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,7 +64,7 @@ CREATE TABLE profils_investisseurs (
 ) ENGINE=InnoDB;
 
 -- ==========================================
-[cite_start]-- 7. INTÉRÊTS INVESTISSEURS (Celle qui manquait !) [cite: 19]
+-- 7. INTÉRÊTS INVESTISSEURS (Celle qui manquait !) [cite: 19]
 -- ==========================================
 CREATE TABLE investisseur_interets (
     investisseur_id INT NOT NULL,
@@ -75,7 +75,7 @@ CREATE TABLE investisseur_interets (
 ) ENGINE=InnoDB;
 
 -- ==========================================
-[cite_start]-- 8. DEMANDES DE CONTACT (Celle qui manquait avant !) [cite: 32]
+-- 8. DEMANDES DE CONTACT (Celle qui manquait avant !) [cite: 32]
 -- ==========================================
 CREATE TABLE demandes_contact (
     id INT AUTO_INCREMENT PRIMARY KEY,

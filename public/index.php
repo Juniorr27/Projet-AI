@@ -116,7 +116,8 @@ $router->addRoute('register', 'AuthController@register');
 $router->addRoute('logout', 'AuthController@logout');
 
 // Espace Membre
-$router->addRoute('dashboard', 'AuthController@dashboard'); 
+//$router->addRoute('dashboard', 'AuthController@dashboard'); 
+$router->addRoute('dashboard', 'DashboardController@index');
 
 // Catalogue et Détails
 $router->addRoute('projets', 'ProjectController@index'); 
