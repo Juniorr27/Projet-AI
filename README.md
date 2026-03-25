@@ -1,4 +1,4 @@
-# 🚀 Projet AI - Plateforme de Mise en Relation
+#  Projet AI - Plateforme de Mise en Relation
 
 **Projet AI** est une application web conçue pour connecter des porteurs de projets innovants dans le domaine de l'Intelligence Artificielle avec des investisseurs ciblés. 
 
@@ -6,7 +6,7 @@ Ce projet a été développé dans le cadre de la 2ème année de BUT Informatiq
 
 ---
 
-## 🎯 Fonctionnalités Principales (MVP)
+##  Fonctionnalités Principales (MVP)
 
 * ** Authentification par Rôles :** Inscription et connexion distinctes pour les "Porteurs de projets" et les "Investisseurs".
 * ** Profils Personnalisés :** * Les porteurs peuvent présenter leur projet, leur stade d'avancement (Idée, Prototype, etc.) et uploader leur Pitch Deck (PDF).
@@ -17,7 +17,7 @@ Ce projet a été développé dans le cadre de la 2ème année de BUT Informatiq
 
 ---
 
-## 🛠️ Stack Technique
+##  Stack Technique
 
 * **Backend :** PHP (vanilla, Architecture MVC)
 * **Base de Données :** MySQL (Connexion sécurisée via PDO)
